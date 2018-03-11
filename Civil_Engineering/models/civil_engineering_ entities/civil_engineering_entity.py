@@ -1,7 +1,10 @@
 from abc import ABC, abstractmethod, ABCMeta
 
 class CivilEngineeringEntity(ABC):
-    pass
-x = CivilEngineeringEntity()
-print(CivilEngineeringEntity.__base__.__instancecheck__(x))
+    def __init__(self):
+        self.__inspection__ = {}
+    @abstractmethod
+    def add_inspection(self, inspection_name, inspection):
+        pass
+
 
